@@ -1,6 +1,15 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using System.Reflection;
+using MediatR;
+using taskManagement.Data;
+using taskManagement.Repositories;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddDbContext<DbContextClass>();
+builder.Services.AddScoped<IWorkspaceRepository, WorkspaceRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,4 +32,18 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+//test
+
+//test2
+
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI(c =>
+//    {
+//        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+//        c.RoutePrefix = string.Empty;  // Set Swagger UI at the root
+//    });
+//}
 
