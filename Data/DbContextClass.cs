@@ -18,6 +18,7 @@ namespace taskManagement.Data
         }
 
         public DbSet<Workspace> Workspaces { get; set; }
+        public DbSet<Board> Boards { get; set; }
 
     }
 }
