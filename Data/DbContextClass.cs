@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using taskManagement.Models;
+using Task = taskManagement.Models.Task;
 
 namespace taskManagement.Data
 {
@@ -19,6 +20,7 @@ namespace taskManagement.Data
 
         public DbSet<Workspace> Workspaces { get; set; }
         public DbSet<Board> Boards { get; set; }
+        public DbSet<Task> Tasks { get; set; }
 
     }
 }

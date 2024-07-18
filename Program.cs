@@ -14,6 +14,8 @@ builder.Services.AddDbContext<DbContextClass>();
 
 builder.Services.AddScoped<IWorkspaceRepository, WorkspaceRepository>();
 builder.Services.AddScoped<IBoardRepository, BoardRepository>();
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+
 
 
 
