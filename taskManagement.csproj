@@ -23,6 +23,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +35,7 @@
     <None Remove="Command\" />
     <None Remove="Handlers\" />
     <None Remove="Controllers\" />
+    <None Remove="Models\DTO\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -42,5 +45,6 @@
     <Folder Include="Command\" />
     <Folder Include="Handlers\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Models\DTO\" />
   </ItemGroup>
 </Project>
